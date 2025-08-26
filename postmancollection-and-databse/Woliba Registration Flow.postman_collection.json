@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "7d33684a-ac4b-430e-a903-99b1d3f76505",
+		"name": "Woliba Invite Magic Link Registration Flow",
+		"description": "APIs for multi-step registration with magic link",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31803241",
+		"_collection_link": "https://web-services-9592.postman.co/workspace/woliba-Assignment~05bc13ef-08b2-4863-9a1d-b7dccdc8aae1/collection/31803241-7d33684a-ac4b-430e-a903-99b1d3f76505?action=share&source=collection_link&creator=31803241"
+	},
+	"item": [
+		{
+			"name": "Invite User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"first_name\": \"Parmod\",\n  \"last_name\": \"Kumar\",\n  \"email\": \"parmod2711@gmail.com\",\n  \"company_name\" : \"Demo Company\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/invite",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"invite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/magic-link/user?token=vlRnvpAcNLgCoCF7IkzMFePrmKCkvUE8qgMHcQJ1JmBrWEYRtLsVEgK0hIQTLWK5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"magic-link",
+						"user"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "vlRnvpAcNLgCoCF7IkzMFePrmKCkvUE8qgMHcQJ1JmBrWEYRtLsVEgK0hIQTLWK5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User by Magic Link",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/magic-link/user?token={{magic_token}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"magic-link",
+						"user"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{magic_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Step 1 - Verify Email Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"first_name\": \"Parmod\",\n  \"last_name\": \"Kumar\",\n  \"email\": \"parmod2711@gmail.com\",\n  \"company_name\" : \"Demo Company\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/verify-email-request",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"verify-email-request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Step 2 - Verify OTP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"parmod2711@gmail.com\",\n  \"otp\": \"430404\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/verify-otp",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"verify-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Step 3 - Resend OTP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"parmod2711@gmail.com\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/resend-otp",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"resend-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"parmod2711@gmail.com\",\n  \"password\": \"demo@123\",\n  \"password_confirmation\": \"demo@123\",\n  \"dob\": \"1988-06-15\",\n  \"contact_number\": \"9729159515\",\n  \"confirmation_flag\": true\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/user/profile",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Wellness Interests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/wellness-interests",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"wellness-interests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Wellness Interests",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"parmod2711@gmail.com\",\n  \"interest_ids\": [1,2]\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/wellness-interests",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"wellness-interests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Wellbeing Pillars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/wellbeing-pillars",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"wellbeing-pillars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Wellbeing Pillars",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"parmod2711@gmail.com\",\n  \"pillar_ids\": [1,2,3]\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/wellbeing-pillars",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"wellbeing-pillars"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000"
+		},
+		{
+			"key": "magic_token",
+			"value": ""
+		}
+	]
+}

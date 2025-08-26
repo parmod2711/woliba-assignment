@@ -293,7 +293,7 @@ class RegistrationController extends Controller
                 // Custom error messages
                 'email.email' => 'Please provide a valid email address.',
                 'email.exists' => 'This email is not registered.',
-                'pillar_ids.required' => 'You must select at least one wellbeing pillars.',
+                'pillar_ids.required' => 'You must select at least 3 wellbeing pillars.',
                 'pillar_ids.min' => 'You must select at least 3 wellbeing pillars.',
                 'pillar_ids.*.exists' => 'One or more selected wellbeing pillars are invalid.', // if it doesn't exits in table
             ]

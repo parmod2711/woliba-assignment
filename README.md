@@ -24,19 +24,24 @@ The flow includes:
 ## 🖼️ API Flow Screenshots   
 
 ### 1. Verify Email Request (`/api/verify-email-request`)  
-![Verify Email Request Response](screenshots/verify-and-get-user-detail-by-email.png)  
+![Verify Email Request Response](https://github.com/parmod2711/woliba-assignment/tree/main/screenhsots/verify-and-get-user-detail-by-email.png)  
 
 ### 2. Verify OTP (`/api/verify-otp`)  
-![Verify OTP Response](screenshots/verify-otp.png)  
+![Verify OTP Response](https://github.com/parmod2711/woliba-assignment/tree/main/screenhsots/verify-otp.png)  
 
 ### 3. Resend OTP (`/api/resend-otp`)  
-![Resend OTP Response](screenshots/resend-otp.png)  
+![Resend OTP Response](https://github.com/parmod2711/woliba-assignment/tree/main/screenhsots/resend-otp.png)  
 
 ### 4. Save Wellness Interests (`/api/save-wellness-interests`)  
-![Save Wellness Interests Response](screenshots/save-wellness-interests.png)  
+![Save Wellness Interests Response](https://github.com/parmod2711/woliba-assignment/tree/main/screenhsots/save-wellness-interests.png)  
 
 ### 5. Save Profile and Wellbeing Pillars (`/api/save-wellbeing-pillars`)  
-![Save Wellbeing Pillars Response](screenshots/save-wellbeing-pillars.png)  
+![Save Wellbeing Pillars Response](https://github.com/parmod2711/woliba-assignment/tree/main/screenhsots/save-wellbeing-pillars.png)  
+
+### 6. I have also uploaded other screenshots from postman API responses. which are located in Screenshot folder. 
+
+### 7. Postman API Collection and Database file location
+(https://github.com/parmod2711/woliba-assignment/tree/main/postmancollection-and-databse)
 
 ---
 
@@ -44,9 +49,11 @@ The flow includes:
 
 ### 1. Clone Repo & Install Dependencies  
 ```bash
-git clone <your-repo-url>
 cd laravel-assignment
 composer install
+git init
+git clone https://github.com/parmod2711/woliba-assignment.git
+
 ```
 
 ### 2. Setup Environment  
@@ -71,6 +78,7 @@ php artisan serve
 App runs at:  
 `http://127.0.0.1:8001`
 
+
 ---
 
 ## Libraries / Tools Used  
@@ -80,9 +88,8 @@ App runs at:
 - **Laravel Validator** – Request validation  
 - **Editor** – Visual Studio Code Editor  
 - **Eloquent ORM** – Database ORM  
-- **Laravel Mail** – OTP email sending  
+- **Mailhog** – For email sending  
 - **Postman** – API testing  
-- **Log channels** – Email logging  
 
 ---
 
