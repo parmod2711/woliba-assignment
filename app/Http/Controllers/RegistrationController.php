@@ -49,7 +49,7 @@ class RegistrationController extends Controller
         //\Log::channel('emaillog')->info("Magic link email sent to {$user->email}: {$magicLink}");
 
         return response()->json([
-            'message' => 'Invitation sent successfully. Check your email for the magic link.',
+            'message' => 'Invitation sent successfully. Ask user to check email for the magic link verification.',
         ]);
     }
 
