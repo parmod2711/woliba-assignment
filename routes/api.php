@@ -6,15 +6,6 @@ use App\Http\Controllers\RegistrationController;
 
 use Illuminate\Support\Facades\Mail;
 
-Route::get('/test-mail', function () {
-    Mail::raw('This is a test email from Laravel + MailHog.', function ($message) {
-        $message->to('test@example.com')
-                ->subject('MailHog Test');
-    });
-    return "Mail sent!";
-});
-
-
 // Route when user will register from invitation link
 
 Route::post('/invite', [RegistrationController::class, 'invite']);
