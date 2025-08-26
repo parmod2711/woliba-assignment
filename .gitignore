@@ -12,8 +12,6 @@ Homestead.json
 npm-debug.log
 yarn-error.log
 *.log
-*.sql
-*.sqlite
 .DS_Store
 Thumbs.db
 

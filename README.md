@@ -70,8 +70,12 @@ Update `.env` with:
 ```bash
 php artisan migrate
 ```
+### 4. Run Seeder 
+```bash
+php artisan db:seed
+```
 
-### 4. Run Server  
+### 5. Run Server  
 ```bash
 php artisan serve
 ```
