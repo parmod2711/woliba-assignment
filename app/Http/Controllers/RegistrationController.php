@@ -74,11 +74,14 @@ class RegistrationController extends Controller
         // Mark token as used
         $user->update(['magic_token_used_at' => Carbon::now()]);
 
-        return response()->json([
-            'first_name'   => $user->first_name,
-            'last_name'    => $user->last_name,
-            'email'        => $user->email,
-            'company_name' => $user->company_name,
+       return response()->json([
+            'message' => 'Email verification successful',
+            'user_data' => [
+                'first_name'   => $user->first_name,
+                'last_name'    => $user->last_name,
+                'email'        => $user->email,
+                'company_name' => $user->company_name,
+            ]
         ]);
     }
 
