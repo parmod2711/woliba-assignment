@@ -91,7 +91,7 @@
 			"response": []
 		},
 		{
-			"name": "Step 1 - Verify Email Request",
+			"name": "Signup User From Web",
 			"request": {
 				"method": "POST",
 				"header": [

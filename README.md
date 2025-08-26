@@ -23,24 +23,31 @@ The flow includes:
 
 ## 🖼️ API Flow Screenshots   
 
-### 1. Verify Email Request (`/api/verify-email-request`)  
+
+### 1. Invite user (`/api/invite`)  
+![Invite User Response](https://github.com/parmod2711/woliba-assignment/tree/main/screenhsots/invite-user.png)  
+
+### 2. Verify Email By Magic Link (`/api/magic-link/user`)  
 ![Verify Email Request Response](https://github.com/parmod2711/woliba-assignment/tree/main/screenhsots/verify-and-get-user-detail-by-email.png)  
 
-### 2. Verify OTP (`/api/verify-otp`)  
+### 3. Signup From Web (`/api/verify-email-request`)  
+![Verify Email Request Response](https://github.com/parmod2711/woliba-assignment/tree/main/screenhsots/verify-email-request.png)
+
+### 4. Verify OTP (`/api/verify-otp`)  
 ![Verify OTP Response](https://github.com/parmod2711/woliba-assignment/tree/main/screenhsots/verify-otp.png)  
 
-### 3. Resend OTP (`/api/resend-otp`)  
+### 5. Resend OTP (`/api/resend-otp`)  
 ![Resend OTP Response](https://github.com/parmod2711/woliba-assignment/tree/main/screenhsots/resend-otp.png)  
 
-### 4. Save Wellness Interests (`/api/save-wellness-interests`)  
+### 6. Save Wellness Interests (`/api/save-wellness-interests`)  
 ![Save Wellness Interests Response](https://github.com/parmod2711/woliba-assignment/tree/main/screenhsots/save-wellness-interests.png)  
 
-### 5. Save Profile and Wellbeing Pillars (`/api/save-wellbeing-pillars`)  
+### 7. Save Profile and Wellbeing Pillars (`/api/save-wellbeing-pillars`)  
 ![Save Wellbeing Pillars Response](https://github.com/parmod2711/woliba-assignment/tree/main/screenhsots/save-wellbeing-pillars.png)  
 
-### 6. I have also uploaded other screenshots from postman API responses. which are located in Screenshot folder. 
+### 8. I have also uploaded other screenshots from postman API responses. which are located in Screenshot folder. 
 
-### 7. Postman API Collection and Database file location
+### 9. Postman API Collection and Database file location
 (https://github.com/parmod2711/woliba-assignment/tree/main/postmancollection-and-databse)
 
 ---

@@ -13,7 +13,7 @@ Route::get('/magic-link/user', [RegistrationController::class, 'getUserByMagicLi
 
 // Route when user will register from the web
 
-Route::post('/verify-email-request', [RegistrationController::class, 'verifyEmailRequest']);
+Route::post('/verify-email-request', [RegistrationController::class, 'signupRequest']);
 Route::post('/verify-otp', [RegistrationController::class, 'verifyOtp']);
 Route::post('/resend-otp', [RegistrationController::class, 'resendOtp']);
 

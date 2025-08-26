@@ -86,7 +86,7 @@ class RegistrationController extends Controller
      * Step 1A: Create user (Web only)
      */
 
-    public function verifyEmailRequest(Request $request)
+    public function signupRequest(Request $request)
     {
         $validator = \Validator::make($request->all(), [
             'email' => 'required|email|unique:users,email',
