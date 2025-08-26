@@ -25,7 +25,7 @@ The flow includes:
 
 
 ### 1. Invite user (`/api/invite`)  
-![Invite User Response](https://github.com/parmod2711/woliba-assignment/tree/main/screenhsots/invite-user.png)  
+![Invite User Response](https://github.com/parmod2711/woliba-assignment/tree/main/screenhsots/inviteuser.png)  
 
 ### 2. Verify Email By Magic Link (`/api/magic-link/user`)  
 ![Verify Email Request Response](https://github.com/parmod2711/woliba-assignment/tree/main/screenhsots/verify-and-get-user-detail-by-email.png)  
