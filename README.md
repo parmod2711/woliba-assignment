@@ -17,7 +17,7 @@ The flow includes:
    - Registration completes once pillars are saved.  
 
 3. **Email**  
-   - All emails are sent via Mailhog.  
+   - All emails are sent via Mailhog. 
 
 ---
 
@@ -69,9 +69,24 @@ cp .env.example .env
 php artisan key:generate
 ```
 
+### 3. For MailHog
+- For Mac: Run following command in terminal
+- brew update
+- brew install mailhog 
+- brew services start mailhog
+
 Update `.env` with:  
 - Database credentials  
 - Mailhog configuration (for emails)  
+
+MAIL_MAILER=smtp
+MAIL_HOST=127.0.0.1
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="noreply@localhost.test"
+MAIL_FROM_NAME="Laravel App"
 
 ### 3. Run Migrations  
 ```bash
